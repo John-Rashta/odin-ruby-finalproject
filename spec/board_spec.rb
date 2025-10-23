@@ -24,6 +24,11 @@ describe Board do
       invalid_move = basic_board.validate_location?([0, 10])
       expect(invalid_move).to eq(false)
     end
+
+    it "returns false when invalid 2" do
+      invalid_move = basic_board.validate_location?([10, 0])
+      expect(invalid_move).to eq(false)
+    end
   end
 
   describe "#board" do
